@@ -11,7 +11,7 @@ const slides = [
         title: 'Pure Organic Honey',
         description:
             'Taste the natural sweetness harvested with care from our beehives.',
-        image: '/images/slider1.jpg',
+        image: '/slides/slide1.jpg',
         buttonText: 'Shop Now'
     },
     {
@@ -19,7 +19,7 @@ const slides = [
         title: 'Beekeeping & Nature',
         description:
             'Discover the tradition of beekeeping and enjoy fresh honey every day.',
-        image: '/images/slider2.jpg',
+        image: '/slides/slide2.jpg',
         buttonText: 'Learn More'
     },
     {
@@ -27,7 +27,7 @@ const slides = [
         title: 'Healthy & Delicious',
         description:
             'Our honey is 100% organic, rich in nutrients and perfect for your family.',
-        image: '/images/slider3.jpg',
+        image: '/slides/slide3.jpg',
         buttonText: 'Explore Products'
     }
 ]
@@ -54,8 +54,8 @@ export default function HeroSlider() {
                     animate={{opacity: 1, scale: 1}}
                     exit={{opacity: 0}}
                     transition={{duration: 0.8}}>
-                    <div className="bg-black/40 w-full h-full flex items-center justify-center">
-                        <div className="text-center text-white max-w-2xl px-4">
+                    <div className="w-full h-full flex items-center justify-center">
+                        <div className="text-center max-w-2xl px-4">
                             <motion.h1
                                 className="text-4xl md:text-6xl font-bold mb-4"
                                 initial={{y: 30, opacity: 0}}
@@ -74,7 +74,7 @@ export default function HeroSlider() {
                                 initial={{y: 30, opacity: 0}}
                                 animate={{y: 0, opacity: 1}}
                                 transition={{delay: 0.6}}>
-                                <Button className="bg-yellow-500 hover:bg-yellow-600 text-white">
+                                <Button size={'lg'}>
                                     {slides[current].buttonText}
                                 </Button>
                             </motion.div>

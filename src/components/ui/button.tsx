@@ -10,15 +10,15 @@ const buttonVariants = cva(
         variants: {
             variant: {
                 default:
-                    'bg-primary text-primary-foreground shadow-xs hover:bg-black hover:text-white [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:rotate-45',
+                    'bg-primary text-primary-foreground shadow-xs hover:bg-black hover:text-white [&_svg]:transition-transform [&_svg]:duration-300',
                 destructive:
-                    'bg-destructive text-white shadow-xs hover:bg-black [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:rotate-45',
+                    'bg-destructive text-white shadow-xs hover:bg-black [&_svg]:transition-transform [&_svg]:duration-300',
                 outline:
                     'border bg-background shadow-xs hover:bg-black hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:rotate-45',
                 secondary:
-                    'bg-secondary text-secondary-foreground shadow-xs hover:bg-black [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:rotate-45',
-                ghost: 'text-primary hover:bg-primary/10 [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:rotate-45',
-                link: 'text-primary underline-offset-4 hover:underline [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:rotate-45 hover:bg-black'
+                    'bg-secondary text-secondary-foreground shadow-xs hover:bg-black [&_svg]:transition-transform [&_svg]:duration-300',
+                ghost: 'text-primary hover:bg-primary/10 [&_svg]:transition-transform [&_svg]:duration-300',
+                link: 'text-primary underline-offset-4 hover:underline [&_svg]:transition-transform [&_svg]:duration-300 hover:bg-black'
             },
             size: {
                 default: 'h-9 px-4 py-2 has-[>svg]:px-3 font-bold',

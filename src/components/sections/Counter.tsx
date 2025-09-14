@@ -41,7 +41,7 @@ export default function Stats() {
         {id: 1, value: 200000, label: 'Amazing Projects Done', suffix: 'k'},
         {id: 2, value: 3000, label: 'Hectares of Fields'},
         {id: 3, value: 1275, label: 'Bee Families'},
-        {id: 4, value: 14000000, label: 'Bee Hives', suffix: 'm'}
+        {id: 4, value: 14000, label: 'Bee Hives', suffix: 'm'}
     ]
 
     const iconVariants = {

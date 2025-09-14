@@ -5,6 +5,9 @@ import Link from 'next/link'
 import {Button} from '../ui/button'
 import Bee from '../../../public/svg/Bee'
 import Title from '../Title'
+import BeeClose from '../../../public/svg/BeeClose'
+import BeeOpen from '../../../public/svg/BeeOpen'
+import MoreButton from '../MoreButton'
 
 export default function AboutUs() {
     const images = [
@@ -30,7 +33,7 @@ export default function AboutUs() {
         <section id="about-us" className="py-20 bg-white">
             <div className="container mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-center gap-10">
                 <div className="lg:w-1/2 flex justify-center">
-                    <div className="relative w-120 h-120">
+                    <div className="relative md:w-110 md:h-110 w-90 h-80">
                         {images.map(image => (
                             <div
                                 className={`hexagon absolute ${image.className}`}
@@ -51,17 +54,10 @@ export default function AboutUs() {
                     <Title
                         subTitle="About Us"
                         title="We Are On Your Mind And Your Test Buds"
-                        description="Melipona is a family owned beekeeping & honey shop dedicated to providing the purest and most natural honey products. With years of tradition and passion behind every jar, we believe in quality, sustainability, and the connection between nature and nourishment."
+                        description="İhsan Arıcılık is a family owned beekeeping & honey shop dedicated to providing the purest and most natural honey products. With years of tradition and passion behind every jar, we believe in quality, sustainability, and the connection between nature and nourishment."
                     />
 
-                    <div className="flex gap-4">
-                        <Link href="/about">
-                            <Button size={'lg'}>
-                                Learn More
-                                <Bee width={30} height={30} />
-                            </Button>
-                        </Link>
-                    </div>
+                    <MoreButton />
                 </div>
             </div>
         </section>

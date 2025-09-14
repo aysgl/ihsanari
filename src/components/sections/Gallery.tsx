@@ -1,6 +1,6 @@
 'use client'
-import HexagonGrid from '@/components/HexagonGrid'
 import Title from '@/components/Title'
+import GalleryGrid from '../GalleryGrid'
 
 const images = Array.from({length: 5}).map((_, i) => ({
     id: i + 1,
@@ -22,7 +22,7 @@ export default function Gallery() {
                 />
             </div>
 
-            <HexagonGrid items={images} />
+            <GalleryGrid items={images} />
         </div>
     )
 }

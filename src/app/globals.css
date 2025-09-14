@@ -132,19 +132,19 @@
 }
 
 .hexagon.style-1{
-	width: 55%;
+	width: 50%;
   margin-top:0%;
-	margin-left: 50%;
+	margin-left: 43%;
 }
 
 .hexagon.style-2{
-	width: 55%;
-	margin-top: 55%;
-	margin-left: 50%;
+	width:50%;
+	margin-top: 48%;
+	margin-left: 43%;
 }
 
 .hexagon.style-3{
-	width: 55%;
-	margin-top: 28%;
-  margin-left: 2%;
+	width: 50%;
+	margin-top: 23%;
+  margin-left: 0%;
 }

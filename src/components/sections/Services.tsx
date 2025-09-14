@@ -9,40 +9,46 @@ import {
 } from '@/components/ui/card'
 import Bee from '../../../public/svg/Bee'
 import Title from '../Title'
-import Link from 'next/link'
-import {Button} from '../ui/button'
 import {motion} from 'framer-motion'
+import MoreButton from '../MoreButton'
 
 const MotionCard = motion(Card)
 
 const services = [
     {
         id: 1,
-        title: 'Arıcılık Danışmanlığı',
+        title: 'Arıcılık Malzemeleri',
         description:
-            'Deneyimli ekibimizle arıcılık konusunda profesyonel danışmanlık hizmeti sunuyoruz.',
-        image: '/images/service1.png'
+            'Arıcılıkla ilgili tüm araç-gereçleri, aletleri ve körükleri uygun fiyatlarla temin edebilirsiniz.'
     },
     {
         id: 2,
-        title: 'Bal Üretimi',
-        description:
-            'Doğal yöntemlerle ürettiğimiz yüksek kaliteli balları sizlere sunuyoruz.',
-        image: '/images/service2.png'
+        title: 'Ana Arı ve Arı Sağlığı',
+        description: 'Ana arı yetiştirme, arı sağlığı ve propolis ürünleri.'
     },
     {
         id: 3,
-        title: 'Arı Ekipmanları Satışı',
+        title: 'Bal ve Bal İşleme',
         description:
-            'Arıcılıkla ilgili tüm ekipmanları uygun fiyatlarla satışa sunuyoruz. Arıcılıkla ilgili tüm ekipmanları uygun fiyatlarla satışa sunuyoruz.',
-        image: '/images/service3.png'
+            'Bal işleme ve dolum makineleri, manuel ve otomatik süzme makineleri hizmetinizde.'
     },
     {
         id: 4,
-        title: 'Organik Bal Satışı',
+        title: 'Polen ve Ürünleri',
         description:
-            'Kendi ürettiğimiz organik balları güvenle temin edebilirsiniz.',
-        image: '/images/service4.png'
+            'Organik polen ve polen toplama/kurutma makineleri ile arıcılık ürünleri.'
+    },
+    {
+        id: 5,
+        title: 'Kovan ve Kovan Ekipmanları',
+        description:
+            'Kovan, çerçeve, temel petek çeşitleri, sır alma ekipmanları ve yemlikler.'
+    },
+    {
+        id: 6,
+        title: 'Koruyucu Ekipman',
+        description:
+            'Arıcılık sırasında güvenliğiniz için koruyucu kıyafet ve ekipmanlar.'
     }
 ]
 
@@ -92,14 +98,10 @@ export default function Services() {
                                     {service.description}
                                 </CardDescription>
                                 <CardAction className="md:mt-16 mt-8">
-                                    <Link
+                                    <MoreButton
+                                        variant={'ghost'}
                                         href={`/services/${service.id}`}
-                                        className="font-bold">
-                                        <Button variant={'ghost'} size={'lg'}>
-                                            Learn More
-                                            <Bee width={30} height={30} />
-                                        </Button>
-                                    </Link>
+                                    />
                                 </CardAction>
                             </CardContent>
                         </MotionCard>
