@@ -1,7 +1,7 @@
 'use client'
 
 import {useEffect, useState} from 'react'
-import {motion, useAnimation} from 'framer-motion'
+import {motion} from 'framer-motion'
 import Bee from '../../../public/svg/Bee'
 import {Card, CardContent, CardDescription, CardTitle} from '../ui/card'
 
