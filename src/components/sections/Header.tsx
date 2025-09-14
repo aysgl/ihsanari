@@ -51,11 +51,11 @@ export default function Header() {
                     {/* Nav Links */}
                     <nav className="hidden md:flex items-center gap-8">
                         <Link href="/">Home</Link>
-                        <Link href="/pages">Pages</Link>
-                        <Link href="/products">Products</Link>
-                        <Link href="/portfolio">Portfolio</Link>
-                        <Link href="/blog">Blog</Link>
-                        <Link href="/contact">Contact Us</Link>
+                        <Link href="/#">Pages</Link>
+                        <Link href="/#">Products</Link>
+                        <Link href="/#">Portfolio</Link>
+                        <Link href="/#">Blog</Link>
+                        <Link href="/#">Contact Us</Link>
                     </nav>
 
                     {/* Actions */}
