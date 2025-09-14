@@ -1,7 +1,8 @@
 'use client'
+
 import {motion, AnimatePresence} from 'framer-motion'
 import Image from 'next/image'
-import {KeyboardEvent, useEffect} from 'react'
+import {useEffect} from 'react'
 import {Button} from '@/components/ui/button'
 
 type Item = {id: number; src: string; alt?: string}
@@ -21,6 +22,7 @@ export default function HexagonLightbox({
 }) {
     useEffect(() => {
         function onKey(e: KeyboardEvent) {
+            // DOM KeyboardEvent
             if (!open) return
             if (e.key === 'ArrowRight')
                 onChangeIndex((index + 1) % items.length)
@@ -28,10 +30,9 @@ export default function HexagonLightbox({
                 onChangeIndex((index - 1 + items.length) % items.length)
             if (e.key === 'Escape') onClose()
         }
+
         window.addEventListener('keydown', onKey)
-        return () => {
-            window.removeEventListener('keydown', onKey)
-        }
+        return () => window.removeEventListener('keydown', onKey)
     }, [open, index, items.length, onChangeIndex, onClose])
 
     if (!items || items.length === 0) return null

@@ -1,4 +1,4 @@
-export function Blog() {
+export default function Blog() {
     const posts = [
         {
             id: 1,
