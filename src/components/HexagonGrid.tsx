@@ -1,6 +1,7 @@
 'use client'
 
 import {useState, useEffect, useRef} from 'react'
+import {motion} from 'framer-motion'
 
 type Item = {
     id: number
@@ -88,25 +89,34 @@ export default function HexagonGrid({
                 style={{height: `${containerHeight}px`}}>
                 {items.map((item, i) => {
                     const pos = positions[i] ?? {left: 0, top: 0}
-                    const opacity = hexOpacities[i] ?? 0.8 // Default for SSR
+                    const opacity = hexOpacities[i] ?? 0.8
+
                     return (
-                        <div
+                        <motion.div
                             key={item.id}
-                            className="cursor-pointer absolute backdrop-blur-xl"
+                            className="cursor-pointer hexagon absolute backdrop-blur-xl"
                             style={{
                                 width: `${hexSize}px`,
                                 height: `${hexHeight}px`,
                                 top: `${pos.top}px`,
                                 left: `${pos.left}px`,
-                                backgroundColor: `rgba(255,182,6,${opacity})`,
-                                clipPath:
-                                    'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
-                                boxShadow: '0 4px 10px rgba(0, 0, 0, 0.5)' // Add shadow here
+                                backgroundColor: `rgba(255,182,6,${opacity})`
+                            }}
+                            initial={{opacity: 0, scale: 0.5, y: 20}}
+                            animate={{opacity: 1, scale: 1, y: 0}}
+                            transition={{
+                                duration: 0.6,
+                                delay: i * 0.1,
+                                ease: 'easeOut'
+                            }}
+                            whileHover={{
+                                scale: 1.05,
+                                boxShadow: '0px 8px 20px rgba(0,0,0,0.25)'
                             }}>
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-center text-sm p-2">
                                 {item.name ?? ''}
                             </div>
-                        </div>
+                        </motion.div>
                     )
                 })}
             </div>
